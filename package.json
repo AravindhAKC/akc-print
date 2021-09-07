@@ -1,16 +1,16 @@
 {
-  "name": "cordova-plugin-hello",
+  "name": "cordova-plugin-telpo-print",
   "version": "0.1.0",
-  "description": "A sample for a new cordova plugin",
+  "description": "cordova plugin to print telpo device",
   "cordova": {
-    "id": "cordova-plugin-hello",
+    "id": "cordova-plugin-telpo-print",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/don/cordova-plugin-hello.git"
+    "url": "git+https://github.com/AravindhAKC/akc-print.git"
   },
   "keywords": [
     "cordova",
@@ -19,10 +19,10 @@
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "author": "Don Coleman",
+  "author": "Aravindh AKC",
   "license": "Apache-2",
   "bugs": {
-    "url": "https://github.com/don/cordova-plugin-hello/issues"
+    "url": "https://github.com/AravindhAKC/akc-print"
   },
-  "homepage": "https://github.com/don/cordova-plugin-hello#readme"
+  "homepage": "https://github.com/AravindhAKC/akc-print"
 }
