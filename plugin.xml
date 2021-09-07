@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova-plugin-telpo-print" version="0.0.1">
+  <name>telpoPrinter</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/hello.js" target="js/hello.js"/>
+
+  <js-module src="www/hello.js" name="hello">
+    <clobbers target="telpoPrinter" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Printer">
+        <param name="android-package" value="com.telpo.printer"/>
+      </feature>
+    </config-file>
+
+    <lib-file src="src/android/libs/SmartCardLib.jar" arch="device"  framework="true" />
+    <lib-file src="src/android/libs/telpo_api.jar" arch="device"  framework="true" />
+    <lib-file src="src/android/libs/core-3.1.0.jar" arch="device"  framework="true" />
+
+    <source-file src="src/android/libs/armeabi/libAlUSB.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libcard_reader.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libcollect.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libdecode.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libfingerprint.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libidcard.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libidcard900.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libIDFpr.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libIDFpr2.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libidfprcap.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libled.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libledpower.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libmoneybox.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libpicc.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libposutil.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libserial_port.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libsystem_util.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libtelpo_msr.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libtelpo_nfc.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libtelpo_printer.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libtelpo_printer_48.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libtelpo_printer_581.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libtelpo_printer5880.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libtelpo_serial.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libusb_util.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libwlt2bmp.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libzksensorcore.so" target-dir="libs/armeabi"  framework="true" />
+    <source-file src="src/android/libs/armeabi/libzkwltdecode.so" target-dir="libs/armeabi"  framework="true" />
+
+
+
+    <source-file src="src/android/libs/armeabi-v7a/libAlUSB.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libcard_reader.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libcollect.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libdecode.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libfingerprint.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libidcard.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libidcard900.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libIDFpr.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libIDFpr2.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libidfprcap.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libled.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libledpower.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libmoneybox.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libpicc.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libposutil.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libserial_port.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libsystem_util.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libtelpo_msr.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libtelpo_nfc.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libtelpo_printer.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libtelpo_printer_48.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libtelpo_printer_581.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libtelpo_printer5880.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libtelpo_serial.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libusb_util.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libwlt2bmp.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libzksensorcore.so" target-dir="libs/armeabi-v7a"  framework="true" />
+    <source-file src="src/android/libs/armeabi-v7a/libzkwltdecode.so" target-dir="libs/armeabi-v7a"  framework="true" />
+
+
+    <source-file src="src/android/libs/arm64-v8a/libAlUSB.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libcard_reader.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libcollect.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libdecode.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libfingerprint.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libidcard.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libidcard900.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libIDFpr.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libIDFpr2.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libidfprcap.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libled.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libledpower.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libmoneybox.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libpicc.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libposutil.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libserial_port.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libsystem_util.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libtelpo_msr.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libtelpo_nfc.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libtelpo_printer.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libtelpo_printer_48.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libtelpo_printer_581.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libtelpo_printer5880.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libtelpo_serial.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libusb_util.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libwlt2bmp.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libzksensorcore.so" target-dir="libs/arm64-v8a"  framework="true" />
+    <source-file src="src/android/libs/arm64-v8a/libzkwltdecode.so" target-dir="libs/arm64-v8a"  framework="true" />
+
+
+    <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+
+    <source-file src="src/android/Hello.java" target-dir="src/com/example/hello/"/>
+  </platform>
+
+
+</plugin>
